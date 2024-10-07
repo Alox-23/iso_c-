@@ -1,6 +1,5 @@
 #include "Engine.h"
-#include <string>
-#include <iostream>
+
 Engine* Engine::Instance = nullptr;
 
 bool Engine::Init()
@@ -23,6 +22,8 @@ void Engine::Update()
 void Engine::Render()
 {
     SFML_Window.clear(sf::Color(47, 61, 53));
+
+    SFML_Window.draw(t.getDrawEntityPtr());
 
     SFML_Window.display();
 };

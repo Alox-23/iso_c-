@@ -11,7 +11,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1200, 700), "SFML works!");
     
     sf::Texture texture;
-    texture.loadFromFile("assets/isometric-tiles/green-indiv/green-cube.png");
+    texture.loadFromFile("assets/isometric-tiles/green-indiv/green-cube64.png");
 
     int grid_x = 35;
     int grid_y = 35;
@@ -29,7 +29,7 @@ int main()
 
             // Convert the current time to time since epoch
             auto duration = now.time_since_epoch();
-            cube.setPosition((j*0.5*32)+(i*-0.5*32)-16+600, (j*0.25*32)+(i*0.25*32)+100+(50*sin(6*i)));
+            cube.setPosition((j*0.5*64)+(i*-0.5*64)-16+600, (j*0.25*64)+(i*0.25*64)+100);
             cubes[i][j] = cube;
         }
     };

@@ -2,6 +2,9 @@
 #define ENGINE_H
 
 #include <SFML/Graphics.hpp>
+#include "Tile.h"
+#include <string>
+#include <iostream>
 
 class Engine
 {
@@ -24,6 +27,7 @@ class Engine
         Engine(){};
 
         bool IsRunning;
+        Tile t = Tile("assets/isometric-tiles/green-indiv/green-cube.png", sf::Vector2i(5,5));
         sf::RenderWindow SFML_Window;
         static Engine* Instance;
         sf::Clock clock;

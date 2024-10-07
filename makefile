@@ -1,4 +1,4 @@
-TARGET = src/Main.cpp src/Core/Engine.cpp
+TARGET = src/Main.cpp src/Core/Engine.cpp src/Core/Tile.cpp
 
 BIN = bin/main
 
