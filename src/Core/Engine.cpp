@@ -17,13 +17,13 @@ bool Engine::Clean()
 
 void Engine::Update()
 {
-    
+    this->m.update();
 }
 void Engine::Render()
 {
     SFML_Window.clear(sf::Color(47, 61, 53));
 
-    SFML_Window.draw(*t.getDrawEntityPtr());
+    this->m.render(&SFML_Window);
 
     SFML_Window.display();
 }
@@ -45,4 +45,12 @@ void Engine::Events()
             }
         }
     }
+}
+
+sf::Vector2f Engine::getScreenCords(sf::Vector3f w, float scalar)
+{
+    return sf::Vector2f(
+        w.x*0.5*scalar  +  w.y*-0.5*scalar,
+        w.x*0.25*scalar +  w.y*0.25*scalar + w.z*scalar
+                        );
 };

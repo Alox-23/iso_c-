@@ -10,12 +10,15 @@ class Tile
     private:
         sf::Sprite drawEntity;
         sf::Texture textureEntity;
-        sf::Vector2i worldPosition;
+        sf::Vector3f worldPosition;
         sf::Vector2f drawEntitiySize;
+        void updateScreenCords();
     public:
-        Tile(std::string texturePath, sf::Vector2i worldPosition);
-        sf::Sprite* getDrawEntityPtr();
-        void setDrawEntityPosition(sf::Vector2f v);
+        Tile() {};
+        Tile(std::string texturePath, sf::Vector3f worldPosition);
+        void render(sf::RenderWindow* r);
+        sf::Sprite getDrawEntity();
+        void update();
         ~Tile();
 };
 
