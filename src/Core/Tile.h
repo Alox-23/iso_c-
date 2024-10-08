@@ -11,9 +11,11 @@ class Tile
         sf::Sprite drawEntity;
         sf::Texture textureEntity;
         sf::Vector2i worldPosition;
+        sf::Vector2f drawEntitiySize;
     public:
         Tile(std::string texturePath, sf::Vector2i worldPosition);
         sf::Sprite* getDrawEntityPtr();
+        void setDrawEntityPosition(sf::Vector2f v);
         ~Tile();
 };
 
