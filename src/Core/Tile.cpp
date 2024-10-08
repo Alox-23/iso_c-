@@ -10,9 +10,9 @@ Tile::Tile(std::string texturePath, sf::Vector2i worldPosition)
     this->drawEntity.setTexture(this->textureEntity);
 }
 
-sf::Sprite Tile::getDrawEntityPtr()
+sf::Sprite* Tile::getDrawEntityPtr()
 {
-    return this->drawEntity;
+    return &this->drawEntity;
 }
 
 Tile::~Tile()

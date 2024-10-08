@@ -23,7 +23,7 @@ void Engine::Render()
 {
     SFML_Window.clear(sf::Color(47, 61, 53));
 
-    SFML_Window.draw(t.getDrawEntityPtr());
+    SFML_Window.draw(*t.getDrawEntityPtr());
 
     SFML_Window.display();
 };
